@@ -23,6 +23,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/media_product.mk)
 # /product packages
 PRODUCT_PACKAGES += \
     Camera2 \
+    Contacts \
+    DeskClock \
+    Gallery2 \
+    LatinIME \
+    Launcher3QuickStep \
+    Music \
     OneTimeInitializer \
     Provision \
     Settings \
