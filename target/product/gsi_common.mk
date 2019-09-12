@@ -80,6 +80,7 @@ PRODUCT_COPY_FILES += \
 # Support addtional P vendor interface
 PRODUCT_EXTRA_VNDK_VERSIONS := 28
 
+ifeq ($(VALIDUS_BUILD),)
 # More AOSP packages
 PRODUCT_PACKAGES += \
     messaging \
@@ -89,7 +90,6 @@ PRODUCT_PACKAGES += \
 
 # Telephony:
 #   Provide a APN configuration to GSI product
-ifeq ($(VALIDUS_BUILD),)
 PRODUCT_COPY_FILES += \
     device/sample/etc/apns-full-conf.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/apns-conf.xml
 endif
